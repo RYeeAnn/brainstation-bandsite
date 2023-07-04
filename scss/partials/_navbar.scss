@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+.nav {
+    background-color: #323232;
+    width: 100%;
+}
+
+.navbar {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__title {
+    color: #AFAFAF;
+}
+
+.navbar__links--section a {
+    text-decoration: none;
+    color: #AFAFAF;
+    list-style: none;
+    display: inline-flex;
+}
