@@ -1,0 +1,18 @@
+.photo {
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.photo-gallery {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-gallery__img {
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 16px;
+}

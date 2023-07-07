@@ -1,24 +1,54 @@
-body {
-    margin: 0;
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+
+.header {
+    background-color: $bandsiteblack;
+    text-align: center;
+    padding-top: 0.5rem;
+
+    @include tablet {
+        display: inline-flex;
+        width: 100vw;
+    }
+}
+
+.header__logo {
+   display: inline-flex;
+
+   @include tablet {
+    margin-top: 10px;
+    margin-left: 30px;
+   }
 }
 
 .nav {
-    background-color: #323232;
-    width: 100%;
-}
+    color: $white;
 
-.navbar {
-    display: inline-flex;
-    align-items: center;
-}
+    &__links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 0.3rem;
 
-.navbar__title {
-    color: #AFAFAF;
-}
+        @include tablet {
+            display: inline-flex;
+            margin-left: 2rem;
+            padding-top: 10px;
+        }
+    }
 
-.navbar__links--section a {
-    text-decoration: none;
-    color: #AFAFAF;
-    list-style: none;
-    display: inline-flex;
+    &__link {
+        width: 50%;
+
+        &--bar {
+            border-bottom: 5px solid $white;
+            padding-bottom: 20px;
+        }
+
+        @include tablet {
+            margin-left: 3rem;
+        }
+    }
+    
 }
