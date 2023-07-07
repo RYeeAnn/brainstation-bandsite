@@ -1,5 +1,6 @@
 @use '../partials/variables' as *;
 @use '../partials/mixins' as *;
+@use './typography' as *;
 
 .header {
     background-color: $bandsiteblack;
@@ -49,6 +50,7 @@
         @include tablet {
             margin-left: 3rem;
         }
+        
     }
     
 }
