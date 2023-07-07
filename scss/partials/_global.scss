@@ -1,5 +1,8 @@
+@use './typography' as *;
+
 html {
     width: 100vw;
+    font-family: 'AvenirNext LT Pro';
 }
 
 body {

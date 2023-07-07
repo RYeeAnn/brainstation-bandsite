@@ -1,18 +1,25 @@
+@use './variables' as *;
+
 .photo {
     margin: 0;
     padding-left: 16px;
     padding-right: 16px;
+    background-color: $alabaster;
 }
 
 .photo-gallery {
-    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-}
+    justify-content: center;
+    gap: 1rem;
 
-.photo-gallery__img {
+    &__img {
     display: flex;
-    width: 100vw;
-    height: 40vh;
-    margin-bottom: 16px;
-}
+    width: 100%;
+    }
+
+    &__title {
+    font-weight: 600;
+    padding-top: 1rem;
+    }
+} 

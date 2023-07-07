@@ -5,6 +5,7 @@
     align-items: flex-start;
 
     &__title {
+        font-weight: 600;
         margin: 0;
         padding: 24px 16px 16px 16px
     }
@@ -12,6 +13,15 @@
 
     &__content {
         width: 100%;
+
+        &--quote {
+            font-weight: 600;
+        }
+
+        &--title {
+            font-size: 18px;
+            padding-top: 1rem;
+        }
     }
 
     &__img {

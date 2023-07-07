@@ -1,21 +1,21 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("./AvenirNextLTPro-Bold.woff2") format("woff2"), url("./AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -49,7 +49,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-top: 0.3rem;
+  padding-top: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .nav__links {
@@ -63,7 +63,7 @@
 }
 .nav__link--bar {
   border-bottom: 5px solid #FFFFFF;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 }
 @media screen and (min-width: 768px) {
   .nav__link {
@@ -71,24 +71,68 @@
   }
 }
 
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 .hero {
-  background-image: url(/assets/Images/hero-bio.jpg);
   height: 50vh;
   width: 100vw;
   background-position: center;
   background-size: cover;
   display: flex;
   position: relative;
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/Images/hero-bio.jpg);
 }
 
 .hero__title {
+  font-weight: 600;
   color: #FAFAFA;
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 3.8rem;
+  padding-left: 1rem;
 }
 
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   width: 100vw;
+  font-family: "AvenirNext LT Pro";
 }
 
 body {
@@ -103,11 +147,19 @@ body {
   align-items: flex-start;
 }
 .about__title {
+  font-weight: 600;
   margin: 0;
   padding: 24px 16px 16px 16px;
 }
 .about__content {
   width: 100%;
+}
+.about__content--quote {
+  font-weight: 600;
+}
+.about__content--title {
+  font-size: 18px;
+  padding-top: 1rem;
 }
 .about__img {
   width: 100vw;
@@ -124,19 +176,22 @@ body {
   margin: 0;
   padding-left: 16px;
   padding-right: 16px;
+  background-color: #FAFAFA;
 }
 
 .photo-gallery {
-  justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
-
 .photo-gallery__img {
   display: flex;
-  width: 100vw;
-  height: 40vh;
-  margin-bottom: 16px;
+  width: 100%;
+}
+.photo-gallery__title {
+  font-weight: 600;
+  padding-top: 1rem;
 }
 
 html {
@@ -154,18 +209,31 @@ html {
 .footer__content--socials {
   display: flex;
   gap: 30px;
+  padding-top: 4px;
+  padding-bottom: 16px;
 }
 .footer__content--title {
+  font-size: 24px;
+  font-weight: 600;
   color: #FFFFFF;
   padding-top: 16px;
 }
 .footer__content--info {
+  font-size: 13px;
   color: #FFFFFF;
+}
+.footer__content--info--people {
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+.footer__content--info--item {
+  padding-bottom: 16px;
 }
 .footer__logo {
   margin-top: 4rem;
 }
 .footer__copyright {
+  font-size: 10px;
   color: #FFFFFF;
   padding-bottom: 16px;
 }/*# sourceMappingURL=main.css.map */
