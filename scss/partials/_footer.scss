@@ -1,4 +1,5 @@
 @use '../partials/variables' as *;
+@use '../partials/mixins' as *;
 
 html {
     height: 100%;
@@ -9,14 +10,35 @@ html {
     padding-left: 16px;
     padding-right: 16px;
 
+    @include tablet {
+        position: relative;
+    }
+
+
     &__content {
         margin: 0;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        
+        &--top {
+            @include tablet {
+                display: inline-flex;
+            }
+        }
 
         &--socials {
             display: flex;
             gap: 30px;
             padding-top: 4px;
             padding-bottom: 16px;
+
+            @include tablet {
+                padding-left: 2rem;
+                padding-top: 2rem;
+            }
         }
     }
     
@@ -34,6 +56,13 @@ html {
         font-size: 13px;
         color: $white;
 
+        @include tablet {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+        }
+
         &--people {
             font-weight: 600;
             padding-bottom: 16px;
@@ -47,12 +76,29 @@ html {
     &__logo {
         margin-top: 4rem;
 
+        @include tablet {
+            margin-top: 0.5rem;
+        }
+
+        &--img {
+            @include tablet {
+                position: absolute;
+                top: 2.3rem;
+                right: 3rem;
+            }
+        }
+
     }
 
     &__copyright {
         font-size: 10px;
         color: $white;
+        padding-top: 16px;
         padding-bottom: 16px;
+
+        @include tablet {
+            padding-bottom: 2rem;
+        }
     }
 }
 
