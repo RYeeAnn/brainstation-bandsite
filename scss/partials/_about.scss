@@ -1,3 +1,6 @@
+@use './variables'  as *;
+@use './mixins' as *;
+
 .about {
     display: flex;
     flex-direction: column;
@@ -7,31 +10,98 @@
     &__title {
         font-weight: 600;
         margin: 0;
-        padding: 24px 16px 16px 16px
+        padding: 24px 16px 16px 16px;
+
+        @include tablet {
+            padding-top: 48px;
+            padding-bottom: 36px;
+        }
     }
 
 
     &__content {
-        width: 100%;
+        display: flex;
+        height: 48vh;
 
         &--quote {
             font-weight: 600;
+            line-height: 1.5rem;
+
+            @include tablet {
+                padding-right: 4rem;
+                font-size: 1.43rem;
+                word-spacing: 0.2rem;
+                line-height: 1.8rem;
+                padding-top: 6.5rem;
+                padding-left: 0.6rem;
+            }
+
+            &--bryan {
+                font-size: 0.8rem;
+
+                @include tablet {
+                    font-size: 1.1rem;
+                }
+            }
         }
+
+        &--paragraph {
+            @include tablet {
+                display: flex;
+                width: 80vw;
+            }
+        }
+
 
         &--title {
             font-size: 18px;
-            padding-top: 1rem;
+            padding-top: 2rem;
+
+            @include tablet {
+                font-weight: 600;
+                font-size: 24px;
+            }
+            
+        }
+
+        &--main {
+            font-size: 0.9rem;
+        }
+
+        &--sub {
+            font-size: 0.9rem;
+
+            @include tablet {
+                padding-left: 1.5rem;
+                margin-right: -2.8rem;
+            }
         }
     }
 
     &__img {
-        width: 100vw;
+        display: flex;
+        width: 90vw;
+        height: 45vh;
+        padding-left: 16px;
         object-fit: cover;
+
+        @include tablet {
+            display: flex;
+            width: 80vw;
+            height: 75vh;
+            padding-left: 70px;
+        }
     }
 
     &__paragraph {
         margin: 0;
         padding-left: 16px;
         padding-right: 16px;
+        word-spacing: 0.1rem;
+
+        @include tablet {
+            padding-left: 60px;
+            padding-top: 2rem;
+        }
     }
 }

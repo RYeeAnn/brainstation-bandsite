@@ -101,12 +101,24 @@
   position: relative;
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/Images/hero-bio.jpg);
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 123vh;
+  }
+}
 
 .hero__title {
   font-weight: 600;
   color: #FAFAFA;
   padding-top: 3.8rem;
   padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+    padding-left: 3rem;
+    padding-top: 13rem;
+  }
 }
 
 @font-face {
@@ -151,47 +163,127 @@ body {
   margin: 0;
   padding: 24px 16px 16px 16px;
 }
+@media screen and (min-width: 768px) {
+  .about__title {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 .about__content {
-  width: 100%;
+  display: flex;
+  height: 48vh;
 }
 .about__content--quote {
   font-weight: 600;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .about__content--quote {
+    padding-right: 4rem;
+    font-size: 1.43rem;
+    word-spacing: 0.2rem;
+    line-height: 1.8rem;
+    padding-top: 6.5rem;
+    padding-left: 0.6rem;
+  }
+}
+.about__content--quote--bryan {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .about__content--quote--bryan {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__content--paragraph {
+    display: flex;
+    width: 80vw;
+  }
 }
 .about__content--title {
   font-size: 18px;
-  padding-top: 1rem;
+  padding-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .about__content--title {
+    font-weight: 600;
+    font-size: 24px;
+  }
+}
+.about__content--main {
+  font-size: 0.9rem;
+}
+.about__content--sub {
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 768px) {
+  .about__content--sub {
+    padding-left: 1.5rem;
+    margin-right: -2.8rem;
+  }
 }
 .about__img {
-  width: 100vw;
+  display: flex;
+  width: 90vw;
+  height: 45vh;
+  padding-left: 16px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .about__img {
+    display: flex;
+    width: 80vw;
+    height: 75vh;
+    padding-left: 70px;
+  }
 }
 .about__paragraph {
   margin: 0;
   padding-left: 16px;
   padding-right: 16px;
+  word-spacing: 0.1rem;
+}
+@media screen and (min-width: 768px) {
+  .about__paragraph {
+    padding-left: 60px;
+    padding-top: 2rem;
+  }
 }
 
 .photo {
-  margin: 0;
-  padding-left: 16px;
-  padding-right: 16px;
   background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .photo {
+    padding-left: 2rem;
+  }
 }
 
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .photo-gallery__img {
-  display: flex;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__img {
+    width: 30%;
+  }
 }
 .photo-gallery__title {
   font-weight: 600;
   padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__title {
+    padding-left: 1rem;
+  }
 }
 
 html {

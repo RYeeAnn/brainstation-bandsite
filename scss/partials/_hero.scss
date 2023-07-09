@@ -1,5 +1,6 @@
 @use '../partials/variables' as *;
 @use './typography' as *;
+@use './mixins' as *;
 
 .hero {
     height: 50vh;
@@ -9,6 +10,10 @@
     display: flex;
     position: relative;
     background-image: linear-gradient(rgba(50, 50, 50, 0.5),rgba(50, 50, 50, 0.5)), url(/assets/Images/hero-bio.jpg);
+
+    @include tablet {
+        height: 123vh;
+    }
 }
 
 .hero__title {
@@ -16,4 +21,10 @@
     color: $alabaster;
     padding-top: 3.8rem;
     padding-left: 1rem;
+
+    @include tablet {
+        font-size: 3rem;
+        padding-left: 3rem;
+        padding-top: 13rem;
+    }
 }

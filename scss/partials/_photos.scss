@@ -1,25 +1,38 @@
 @use './variables' as *;
+@use './mixins' as *;
 
 .photo {
-    margin: 0;
-    padding-left: 16px;
-    padding-right: 16px;
     background-color: $alabaster;
+
+    @include tablet {
+        padding-left: 2rem;
+    }
 }
 
 .photo-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 1rem;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include tablet {
+    }
 
     &__img {
-    display: flex;
     width: 100%;
+
+    @include tablet {
+        width: 30%;
+    }
     }
 
     &__title {
     font-weight: 600;
     padding-top: 1rem;
+
+    @include tablet {
+        padding-left: 1rem;
+    }
     }
 } 
