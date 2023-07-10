@@ -7,6 +7,10 @@
     @include tablet {
         padding-left: 2rem;
     }
+
+    @include desktop {
+        padding-left: 6.2rem;
+    }
 }
 
 .photo-gallery {
@@ -35,5 +39,10 @@
     @include tablet {
         padding-left: 1rem;
     }
+
+    @include desktop {
+        font-size: 2.5rem;
+    }
+
     }
 } 

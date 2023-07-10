@@ -14,6 +14,10 @@
     @include tablet {
         height: 123vh;
     }
+
+    @include desktop {
+        height: 132vh;
+    }
 }
 
 .hero__title {
@@ -26,5 +30,11 @@
         font-size: 3rem;
         padding-left: 3rem;
         padding-top: 13rem;
+    }
+
+    @include desktop {
+        font-size: 4rem;
+        padding-left: 10rem;
+        padding-top: 8rem;
     }
 }

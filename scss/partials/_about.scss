@@ -16,6 +16,11 @@
             padding-top: 48px;
             padding-bottom: 36px;
         }
+
+        @include desktop {
+            font-size: 2.5rem;
+            padding-left: 7rem;
+        }
     }
 
 
@@ -36,6 +41,11 @@
                 padding-left: 0.6rem;
             }
 
+            @include desktop {
+                padding-left: 10rem;
+                margin-right: 26rem;
+            }
+
             &--bryan {
                 font-size: 0.8rem;
 
@@ -50,6 +60,11 @@
                 display: flex;
                 width: 80vw;
             }
+
+            @include desktop {
+                width: 53vw;
+                padding-left: 16rem;
+            }
         }
 
 
@@ -60,6 +75,11 @@
             @include tablet {
                 font-weight: 600;
                 font-size: 24px;
+            }
+
+            @include desktop {
+                font-size: 2rem;
+                padding-left: 15.78rem;
             }
             
         }
@@ -91,6 +111,12 @@
             height: 75vh;
             padding-left: 70px;
         }
+
+        @include desktop {
+            width: 71vw;
+            height: 120vh;
+            padding-left: 13rem;
+        }
     }
 
     &__paragraph {
@@ -102,6 +128,10 @@
         @include tablet {
             padding-left: 60px;
             padding-top: 2rem;
+        }
+
+        @include desktop {
+            padding-top: 16rem;
         }
     }
 }

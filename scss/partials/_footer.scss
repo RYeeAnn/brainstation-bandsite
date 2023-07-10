@@ -22,10 +22,19 @@ html {
             width: 100%;
         }
 
+        @include desktop {
+            width: 50%;
+            padding-left: 6.5rem;
+        }
+
         
         &--top {
             @include tablet {
                 display: inline-flex;
+            }
+
+            @include desktop {
+                padding-top: 1rem;
             }
         }
 
@@ -37,7 +46,12 @@ html {
 
             @include tablet {
                 padding-left: 2rem;
-                padding-top: 2rem;
+                padding-top: 2.3rem;
+            }
+
+            @include desktop {
+                padding-left: 3rem;
+                padding-top: 3.3rem;
             }
         }
     }
@@ -48,8 +62,11 @@ html {
         font-weight: 600;
         color: $white;
         padding-top: 16px;
-    }
 
+        @include desktop {
+            font-size: 34px;
+        }
+    }
 
 
     &__content--info {
@@ -86,6 +103,11 @@ html {
                 top: 2.3rem;
                 right: 3rem;
             }
+
+            @include desktop {
+                top: 4.3rem;
+                right: 7.4rem;
+            }
         }
 
     }
@@ -98,6 +120,10 @@ html {
 
         @include tablet {
             padding-bottom: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 6.46rem;
         }
     }
 }
