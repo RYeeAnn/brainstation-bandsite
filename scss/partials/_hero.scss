@@ -38,3 +38,57 @@
         padding-top: 8rem;
     }
 }
+
+
+
+
+
+//Shows 2nd Page
+
+.hero2 {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5),rgba(50, 50, 50, 0.5)), url(/assets/Images2/hero-shows.jpg);
+
+    @include tablet {
+        height: 123vh;
+    }
+
+    @include desktop {
+        height: 132vh;
+    }
+}
+
+.hero2__title {
+    font-weight: 600;
+    color: $alabaster;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+
+    @include tablet {
+        font-size: 3rem;
+        padding-left: 3rem;
+        padding-top: 13rem;
+    }
+
+    @include desktop {
+        font-size: 4rem;
+        padding-left: 10rem;
+        padding-top: 8rem;
+    }
+}
+
+
+.playlist {
+    position: absolute;
+
+    &__bar {
+        padding-top: 9rem;
+        padding-left: 10px;
+        height: 40vh;
+    }
+}
