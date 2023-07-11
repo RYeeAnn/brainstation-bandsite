@@ -1,0 +1,81 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.conversation {
+    background-color: $white;
+
+    &__img {
+        width: 50px;
+        height: 40px;
+        border-radius: 100%;
+        position: absolute;
+    }
+
+    &__title {
+        padding-left: 1rem;
+        font-weight: 600;
+    }
+
+    &__form {
+        padding-left: 4rem;
+    }
+}
+
+.conversation__container {
+    display: flex;
+
+    &--img {
+        padding-right: 4rem;
+        margin-left: -3rem;
+        padding-top: 1rem;
+    }
+
+    &--submit {
+        margin-top: 0.5rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        padding-left: 4.9rem;
+        padding-right: 4.9rem;
+        border-style: hidden;
+        background-color: $bandsiteblack;
+        color: $white;
+        border-radius: 5px;
+    }
+
+    &--info {
+        width: 0;
+
+        &--input {
+            padding-right: 4.5rem;
+            background-color: $mercury;
+            border-radius: 5px;
+            border-style: hidden;
+        }
+
+        &--textarea {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.4rem;
+            border-radius: 5px;
+            background-color: $mercury;
+            border-style: hidden;
+        
+        }
+
+        &--title {
+            font-size: 0.8rem;
+            color: $silver;
+        }
+
+        &--input {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        &--name {
+            padding-bottom: 0.8rem;
+        }
+    }
+}

@@ -565,4 +565,71 @@ html {
   .footer__copyright {
     padding-left: 6.46rem;
   }
+}
+
+.conversation {
+  background-color: #FFFFFF;
+}
+.conversation__img {
+  width: 50px;
+  height: 40px;
+  border-radius: 100%;
+  position: absolute;
+}
+.conversation__title {
+  padding-left: 1rem;
+  font-weight: 600;
+}
+.conversation__form {
+  padding-left: 4rem;
+}
+
+.conversation__container {
+  display: flex;
+}
+.conversation__container--img {
+  padding-right: 4rem;
+  margin-left: -3rem;
+  padding-top: 1rem;
+}
+.conversation__container--submit {
+  margin-top: 0.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 4.9rem;
+  padding-right: 4.9rem;
+  border-style: hidden;
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.conversation__container--info {
+  width: 0;
+}
+.conversation__container--info--input {
+  padding-right: 4.5rem;
+  background-color: #E1E1E1;
+  border-radius: 5px;
+  border-style: hidden;
+}
+.conversation__container--info--textarea {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.4rem;
+  border-radius: 5px;
+  background-color: #E1E1E1;
+  border-style: hidden;
+}
+.conversation__container--info--title {
+  font-size: 0.8rem;
+  color: #AFAFAF;
+}
+.conversation__container--info--input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+.conversation__container--info--name {
+  padding-bottom: 0.8rem;
 }/*# sourceMappingURL=main.css.map */
