@@ -46,7 +46,7 @@
 //Shows 2nd Page
 
 .hero2 {
-    height: 100vh;
+    height: 75vh;
     width: 100vw;
     background-position: center;
     background-size: cover;
@@ -68,6 +68,7 @@
     color: $alabaster;
     padding-top: 0.5rem;
     padding-left: 1rem;
+    position: absolute;
 
     @include tablet {
         font-size: 3rem;
@@ -84,11 +85,6 @@
 
 
 .playlist {
-    position: absolute;
-
-    &__bar {
-        padding-top: 9rem;
-        padding-left: 10px;
-        min-height: 40vh;
-    }
+    padding-top: 10rem;
+    padding-left: 0.6rem;
 }

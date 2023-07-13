@@ -1,3 +1,4 @@
+//Comments
 let conversationComments = [{
     name: "Conner Walton",
     date: "02/17/2021",
@@ -17,39 +18,76 @@ let conversationComments = [{
 }
 ]
     
-    // function commentDisplay(comment, commentContainer) {
-    //     console.log(comment.name);
-    //     let comment__row = document.createElement('div');
-    //     comment__row.classList.add('conversation__row');
-    //     commentContainer.appendChild(comment__row);
+let comment = document.querySelector('.conversation__comments');
 
-    //     let comment__column = document.createElement('div');
-    //     comment__column.classList.add('converesation__column');
+    function display(info) {
 
-    //     let comments__card = document.createElement('div');
-    //     comments__card.classList.add('conversation__card');
+        let comment__card = document.createElement("div");
+        comment__card.className = "conversation__card";
 
-    //     let comments__img = document.createElement('img');
-    //     comments__img.classList.add('conversation__img');
+        let comment__row = document.createElement("div");
+        comment__row.className = "conversation__row";
 
-    //     let comments__name = document.createElement('p');
-    //     comments__name.classList.add('conversation__name');
-    //     comments__name.innerText = comment.name;
-    //     comment__row.appendChild(comments__name);
+        let comment__img = document.createElement("div");
+        comment__img.className = "conversation__pic";
+        comment__row.appendChild(comment__img);
 
-    //     let comments__date = document.createElement('p');
-    //     comments__date.classList.add('conversation__date');
+        let comment__picture = document.createElement("img");
+        comment__picture.className = "conversation__picture";
+        comment__img.appendChild(comment__picture);
 
-    //     let comments__text = document.createElement('p');
-    //     comments__text.classList.add('conversation__text');
+        let comment__info = document.createElement("div");
+        comment__info.className = "conversation__info";
+        comment__row.appendChild(comment__info);
 
-    // }
+        let comment__namedate = document.createElement("div");
+        comment__namedate.className = "conversation__namedate";
 
-    // let comments = document.querySelector('.conversation__comments'); 
+        let comment__name = document.createElement("p");
+        comment__name.className = "conversation__name";
+        comment__name.innerText = info["name"];
+        comment__namedate.appendChild(comment__name);
 
-    // for (let i = 0; i < conversationComments.length; i++) {
-    //     commentDisplay(conversationComments[i], comments);
-    // }
+
+        let comment__date = document.createElement("p");
+        comment__date.className = "conversation__date";
+        comment__date.innerText = info["date"];
+        comment__namedate.appendChild(comment__date);
+        comment__info.append(comment__namedate);
+
+
+        let comment__reply = document.createElement("p");
+        comment__reply.className = "conversation__reply";
+        comment__reply.innerText = info["comment"];
+        comment__info.appendChild(comment__reply);
+        comment__card.appendChild(comment__row);
+        comment.appendChild(comment__card);
+    
+    }
+
+    for (let i = 0; i < conversationComments.length; i++) {
+        display(conversationComments[i])
+    }
+
+
+
+
+//Forms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
