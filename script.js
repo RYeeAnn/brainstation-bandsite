@@ -66,14 +66,42 @@ let comment = document.querySelector('.conversation__comments');
     }
 
     for (let i = 0; i < conversationComments.length; i++) {
-        display(conversationComments[i])
+        display(conversationComments[i]);
     }
+
+
 
 
 
 
 //Forms
 
+let form = document.querySelector(".conversation__form");
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let newinfo = {
+        name: e.target.name.value,
+        date: Date.now(),
+        comment: e.target.comment.value
+    }
+        console.log(newinfo)
+
+        conversationComments.unshift(newinfo)
+
+        console.log(conversationComments)
+
+        comment.innerText = "";
+
+        form.reset()
+    
+
+
+    
+        for (let i = 0; i < conversationComments.length; i++) {
+            display(conversationComments[i]);
+        }
+
+});
 
 
 
@@ -83,6 +111,33 @@ let comment = document.querySelector('.conversation__comments');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let shows = [{
+    
+}]
 
 
 
