@@ -224,7 +224,7 @@
 .playlist__bar {
   padding-top: 9rem;
   padding-left: 10px;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 @font-face {
@@ -571,7 +571,7 @@ html {
   background-color: #FFFFFF;
 }
 .conversation__img {
-  width: 50px;
+  width: 45px;
   height: 40px;
   border-radius: 100%;
   position: absolute;
@@ -607,7 +607,7 @@ html {
   width: 0;
 }
 .conversation__container--info--input {
-  padding-right: 4.5rem;
+  padding-right: 4.7rem;
   background-color: #E1E1E1;
   border-radius: 5px;
   border-style: hidden;
@@ -632,4 +632,17 @@ html {
 }
 .conversation__container--info--name {
   padding-bottom: 0.8rem;
+}
+
+.comments {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-style: solid;
+}
+
+.comments__top {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */

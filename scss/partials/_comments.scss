@@ -1,0 +1,15 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.comments {
+    display: inline-flex;
+    padding: 0.5rem;
+    border-style: solid;
+}
+
+.comments__top {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
