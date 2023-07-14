@@ -23,41 +23,41 @@ let comment = document.querySelector('.conversation__comments');
     function display(info) {
 
         let comment__card = document.createElement("div");
-        comment__card.className = "conversation__card";
+        comment__card.classList.add ("conversation__card");
 
         let comment__row = document.createElement("div");
-        comment__row.className = "conversation__row";
+        comment__row.classList.add ("conversation__row");
 
         let comment__img = document.createElement("div");
-        comment__img.className = "conversation__pic";
+        comment__img.classList.add ("conversation__pic");
         comment__row.appendChild(comment__img);
 
         let comment__picture = document.createElement("img");
-        comment__picture.className = "conversation__picture";
+        comment__picture.classList.add ("conversation__picture");
         comment__img.appendChild(comment__picture);
 
         let comment__info = document.createElement("div");
-        comment__info.className = "conversation__info";
+        comment__info.classList.add ("conversation__info");
         comment__row.appendChild(comment__info);
 
         let comment__namedate = document.createElement("div");
-        comment__namedate.className = "conversation__namedate";
+        comment__namedate.classList.add ("conversation__namedate");
 
         let comment__name = document.createElement("p");
-        comment__name.className = "conversation__name";
+        comment__name.classList.add ("conversation__name");
         comment__name.innerText = info["name"];
         comment__namedate.appendChild(comment__name);
 
 
         let comment__date = document.createElement("p");
-        comment__date.className = "conversation__date";
+        comment__date.classList.add ("conversation__date");
         comment__date.innerText = info["date"];
         comment__namedate.appendChild(comment__date);
         comment__info.append(comment__namedate);
 
 
         let comment__reply = document.createElement("p");
-        comment__reply.className = "conversation__reply";
+        comment__reply.classList.add ("conversation__reply");
         comment__reply.innerText = info["comment"];
         comment__info.appendChild(comment__reply);
         comment__card.appendChild(comment__row);

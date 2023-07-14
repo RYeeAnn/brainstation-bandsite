@@ -29,6 +29,34 @@ let showsInformation = [{
     venue: "Press Club",
     location: "San Francisco, CA"
 },
-]
+];
 
-    let shows = document.querySelector(".shows");
+
+let showsList = document.querySelector(".shows"); 
+for (let i = 0; i < showsInformation.length; i++) {
+    let shows = showsInformation[i];
+
+    let shows__item = document.createElement("ul");
+    shows__item.classList.add("shows__item");
+
+    let shows__date = document.createElement("li");
+    shows__date.classList.add("shows__date");
+    shows__date.innerText = shows.date;
+    shows__item.appendChild(shows__date);
+
+    let shows__venue = document.createElement("li");
+    shows__venue.classList.add("shows__venue");
+    shows__venue.innerText = shows.venue;
+    shows__item.appendChild(shows__venue);
+
+    let shows__location = document.createElement("li");
+    shows__location.classList.add("shows__location");
+    shows__location.innerText = shows.location;
+    shows__item.appendChild(shows__location);
+
+    showsList.appendChild(shows__item)
+
+}
+
+
+   

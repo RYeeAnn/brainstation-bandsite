@@ -29,7 +29,9 @@
     }
 
     &__form {
-        padding-left: 4rem;
+        display: flex;
+        justify-content: center;
+        width: 40vw;
     }
 
     &__namedate {
@@ -102,6 +104,9 @@
             background-color: $mercury;
             border-radius: 5px;
             border-style: hidden;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
         }
 
         &--textarea {
@@ -118,12 +123,6 @@
         &--title {
             font-size: 0.8rem;
             color: $silver;
-        }
-
-        &--input {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            padding-left: 0.5rem;
         }
 
         &--name {

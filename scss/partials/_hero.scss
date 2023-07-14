@@ -46,13 +46,13 @@
 //Shows 2nd Page
 
 .hero2 {
-    height: 60vh;
-    width: 100vw;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5),rgba(50, 50, 50, 0.5)), url(/assets/Images2/hero-shows.jpg);
+    display: flex;
     background-position: center;
     background-size: cover;
-    display: flex;
-    position: relative;
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5),rgba(50, 50, 50, 0.5)), url(/assets/Images2/hero-shows.jpg);
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
 
     @include tablet {
         height: 123vh;
@@ -64,27 +64,13 @@
 }
 
 .hero2__title {
-    font-weight: 600;
     color: $alabaster;
-    padding-top: 0.5rem;
-    padding-left: 1rem;
-    position: absolute;
 
     @include tablet {
         font-size: 3rem;
-        padding-left: 3rem;
-        padding-top: 13rem;
     }
 
     @include desktop {
         font-size: 4rem;
-        padding-left: 10rem;
-        padding-top: 8rem;
     }
-}
-
-
-.playlist {
-    padding-top: 10rem;
-    padding-left: 0.6rem;
 }

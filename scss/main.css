@@ -178,13 +178,13 @@
 }
 
 .hero2 {
-  height: 60vh;
-  width: 100vw;
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/Images2/hero-shows.jpg);
+  display: flex;
   background-position: center;
   background-size: cover;
-  display: flex;
-  position: relative;
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/Images2/hero-shows.jpg);
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
 }
 @media screen and (min-width: 768px) {
   .hero2 {
@@ -198,30 +198,17 @@
 }
 
 .hero2__title {
-  font-weight: 600;
   color: #FAFAFA;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  position: absolute;
 }
 @media screen and (min-width: 768px) {
   .hero2__title {
     font-size: 3rem;
-    padding-left: 3rem;
-    padding-top: 13rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .hero2__title {
     font-size: 4rem;
-    padding-left: 10rem;
-    padding-top: 8rem;
   }
-}
-
-.playlist {
-  padding-top: 10rem;
-  padding-left: 0.6rem;
 }
 
 @font-face {
@@ -588,7 +575,9 @@ html {
   font-weight: 600;
 }
 .conversation__form {
-  padding-left: 4rem;
+  display: flex;
+  justify-content: center;
+  width: 40vw;
 }
 .conversation__namedate {
   display: flex;
@@ -650,6 +639,9 @@ html {
   background-color: #E1E1E1;
   border-radius: 5px;
   border-style: hidden;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 .conversation .conversation__container--info--textarea {
   padding-top: 0.5rem;
@@ -664,11 +656,31 @@ html {
   font-size: 0.8rem;
   color: #AFAFAF;
 }
-.conversation .conversation__container--info--input {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-}
 .conversation .conversation__container--info--name {
   padding-bottom: 0.8rem;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.shows__item {
+  list-style: none;
 }/*# sourceMappingURL=main.css.map */
