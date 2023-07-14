@@ -3,8 +3,20 @@
 
 .shows {
 
-}
+    &__item {
+        list-style: none;
+    }
 
-.shows__item {
-    list-style: none;
+    &__date {
+        padding-bottom: 1rem;
+    }
+
+    &__venue {
+        padding-bottom: 1rem;
+    }
+
+    &__location {
+        padding-bottom: 2rem;
+    }
+
 }

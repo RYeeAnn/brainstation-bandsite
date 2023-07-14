@@ -31,32 +31,51 @@ let showsInformation = [{
 },
 ];
 
-
+//Parent
 let showsList = document.querySelector(".shows"); 
+
 for (let i = 0; i < showsInformation.length; i++) {
     let shows = showsInformation[i];
 
     let shows__item = document.createElement("ul");
     shows__item.classList.add("shows__item");
 
+    let shows__dateTitle = document.createElement("li");
+    shows__dateTitle.classList.add("shows__date--title");
+    shows__dateTitle.innerText = "DATE";
+    shows__item.appendChild(shows__dateTitle);
+
     let shows__date = document.createElement("li");
     shows__date.classList.add("shows__date");
     shows__date.innerText = shows.date;
     shows__item.appendChild(shows__date);
+
+    let shows__venueTitle = document.createElement("li");
+    shows__venueTitle.classList.add("shows__venue--title");
+    shows__venueTitle.innerText = "VENUE";
+    shows__item.appendChild(shows__venueTitle);
 
     let shows__venue = document.createElement("li");
     shows__venue.classList.add("shows__venue");
     shows__venue.innerText = shows.venue;
     shows__item.appendChild(shows__venue);
 
+    let shows__locationTitle = document.createElement("li");
+    shows__locationTitle.classList.add("shows__location--title");
+    shows__locationTitle.innerText = "LOCATION";
+    shows__item.appendChild(shows__locationTitle);
+
     let shows__location = document.createElement("li");
     shows__location.classList.add("shows__location");
     shows__location.innerText = shows.location;
     shows__item.appendChild(shows__location);
 
+    //button
+    let shows__button = document.createElement("button");
+    shows__button.classList.add("shows__button");
+    shows__button.innerText = "BUY TICKETS";
+    shows__item.appendChild(shows__button);
+
     showsList.appendChild(shows__item)
 
 }
-
-
-   
