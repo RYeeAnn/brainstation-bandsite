@@ -94,9 +94,6 @@ form.addEventListener("submit", function(e) {
 
         form.reset()
     
-
-
-    
         for (let i = 0; i < conversationComments.length; i++) {
             display(conversationComments[i]);
         }
@@ -108,36 +105,6 @@ form.addEventListener("submit", function(e) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let shows = [{
-    
-}]
 
 
 
