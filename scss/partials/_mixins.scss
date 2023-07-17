@@ -1,7 +1,7 @@
 @use '../partials/variables' as *;
 
 @mixin mobile {
-    @media screen and (min-width: $mobile-l-breakpoint) {
+    @media screen and (min-width: $mobile-s-breakpoint) {
         @content;
     }
 }
@@ -14,6 +14,12 @@
 
 @mixin desktop {
     @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media screen and (min-width: $desktop-l-breakpoint) {
         @content;
     }
 }
