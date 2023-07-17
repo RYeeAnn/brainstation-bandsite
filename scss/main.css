@@ -211,6 +211,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .playlist {
+    width: 60vw;
+  }
+}
+
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2"), url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff");
@@ -357,15 +363,20 @@ body {
   .about__img {
     display: flex;
     width: 80vw;
-    height: 75vh;
+    height: 60vh;
     padding-left: 70px;
   }
 }
 @media screen and (min-width: 1440px) {
   .about__img {
     width: 71vw;
-    height: 120vh;
+    height: 95vh;
     padding-left: 13rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .about__img {
+    height: 128vh;
   }
 }
 .about__paragraph {
@@ -879,6 +890,9 @@ html {
     width: 70%;
   }
 }
+.shows__table :hover {
+  background-color: #AFAFAF;
+}
 .shows__card {
   border-bottom: 2px solid #AFAFAF;
 }
@@ -922,7 +936,6 @@ html {
   background-color: #000000;
   color: #FFFFFF;
   font-size: 1rem;
-  margin-bottom: 1rem;
   border-radius: 5px;
   width: 100%;
   border: none;

@@ -116,14 +116,18 @@
         @include tablet {
             display: flex;
             width: 80vw;
-            height: 75vh;
+            height: 60vh;
             padding-left: 70px;
         }
 
         @include desktop {
             width: 71vw;
-            height: 120vh;
+            height: 95vh;
             padding-left: 13rem;
+        }
+
+        @include large-desktop {
+            height: 128vh;
         }
     }
 

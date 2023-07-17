@@ -70,10 +70,6 @@ let comment = document.querySelector('.conversation__comments');
     }
 
 
-
-
-
-
 //Forms
 
 let form = document.querySelector(".conversation__form");
@@ -101,20 +97,12 @@ form.addEventListener("submit", function(e) {
 });
 
 
+// API
+axios.get("https://project-1-api.herokuapp.com/comments?api_key=d7f73ceb-3054-49c8-b058-596d1c0b020b")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
