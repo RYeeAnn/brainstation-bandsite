@@ -37,13 +37,11 @@
                 font-size: 1.43rem;
                 word-spacing: 0.2rem;
                 line-height: 1.8rem;
-                padding-top: 6.5rem;
                 padding-left: 0.6rem;
             }
 
             @include desktop {
-                padding-left: 10rem;
-                margin-right: 26rem;
+                padding-left: 9rem;
                 
                 p {
                     padding-top: 2rem;
@@ -51,7 +49,8 @@
             }
 
             @include large-desktop {
-                padding-top: 25rem;
+                padding-top: 30rem;
+                margin-left: 3.5rem;
             }
 
             &--bryan {
@@ -110,24 +109,29 @@
         display: flex;
         width: 90vw;
         height: 45vh;
-        padding-left: 16px;
+        padding-left: 18px;
         object-fit: cover;
 
         @include tablet {
             display: flex;
             width: 80vw;
-            height: 60vh;
-            padding-left: 70px;
+            height: 55vh;
+            padding-left: 75px;
         }
 
         @include desktop {
-            width: 71vw;
-            height: 95vh;
+            width: 75vw;
+            height: 76vh;
             padding-left: 13rem;
+        }
+
+        @include laptop {
+            margin-left: 1.4rem;
         }
 
         @include large-desktop {
             height: 128vh;
+            margin-left: 5rem;
         }
     }
 
@@ -139,11 +143,21 @@
 
         @include tablet {
             padding-left: 60px;
-            padding-top: 2rem;
+            padding-top: 4rem;
+        }
+        
+        @include laptop {
+            width: 89vw;
+            margin-left: 1.8rem;
         }
 
         @include desktop {
-            padding-top: 16rem;
+            padding-top: 10rem;
+        }
+
+        @include large-desktop {
+            margin-left: 14rem;
+            margin-top: 2rem;
         }
     }
 }

@@ -5,11 +5,15 @@
     background-color: $alabaster;
 
     @include tablet {
-        padding-left: 2rem;
+        padding-left: 3rem;
     }
 
     @include desktop {
-        padding-left: 6.2rem;
+        padding-left: 6.5rem;
+    }
+
+    @include large-desktop {
+        margin-left: 2.5rem;
     }
 }
 

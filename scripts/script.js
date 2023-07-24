@@ -1,3 +1,5 @@
+const api_key = "d7f73ceb-3054-49c8-b058-596d1c0b020b";
+
 //Comments
 let conversationComments = [{
     name: "Conner Walton",
@@ -73,6 +75,7 @@ let comment = document.querySelector('.conversation__comments');
 //Forms
 
 let form = document.querySelector(".conversation__form");
+
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     let newinfo = {
@@ -80,12 +83,10 @@ form.addEventListener("submit", function(e) {
         date: Date.now(),
         comment: e.target.comment.value
     }
-        console.log(newinfo)
+        // console.log(newinfo)
+        // console.log(conversationComments)
 
         conversationComments.unshift(newinfo)
-
-        console.log(conversationComments)
-
         comment.innerText = "";
 
         form.reset()
@@ -93,16 +94,48 @@ form.addEventListener("submit", function(e) {
         for (let i = 0; i < conversationComments.length; i++) {
             display(conversationComments[i]);
         }
-
 });
 
 
-// API
-axios.get("https://project-1-api.herokuapp.com/comments?api_key=d7f73ceb-3054-49c8-b058-596d1c0b020b")
-
-    .then(result => {
-        console.log(result);
+//API
+function displayComment() {
+axios
+    .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
+    .then(response => {
+        console.log(response.data);
     })
     .catch(error => {
         console.log(error);
     });
+}
+displayComment();
+
+    
+
+    form.addEventListener("submit",(event) => {
+        event.preventDefault();
+        console.log(event.target.name.value);
+        console.log(event.target.comment.value);
+
+        axios
+            .post("https://project-1-api.herokuapp.com/comments?api_key=d7f73ceb-3054-49c8-b058-596d1c0b020b", {
+                name: event.target.name.value,
+                comment: event.target.comment.value,
+
+            })
+            .then(response => {
+                console.log(response);
+                fetchApiData();
+
+            }).catch(error => {
+                console.log(error);
+            });
+    });
+
+
+
+
+
+
+
+

@@ -108,3 +108,4 @@ function displayShow(show) {
 for (let i = 0; i < shows__array.length; i++) {
     displayShow(shows__array[i]);
 }
+

@@ -60,6 +60,9 @@
 
     @include desktop {
         height: 132vh;
+        display: flex;
+        flex-direction: row;
+        
     }
 }
 
@@ -72,11 +75,24 @@
 
     @include desktop {
         font-size: 4rem;
+        width: 100%;
+        padding-top: 22rem;
+    }
+
+    &--content {
+        @include desktop {
+            font-weight: 600;
+        }
     }
 }
 
 .playlist {
     @include tablet {
         width: 60vw;
+    }
+
+    @include desktop {
+        padding-top: 40rem;
+        width: 60%;
     }
 }

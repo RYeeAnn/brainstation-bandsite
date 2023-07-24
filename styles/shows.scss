@@ -1,15 +1,14 @@
-@use './variables' as *;
-@use './mixins' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
 
 .shows {
     margin-right: 1rem;
-    padding-left: 1rem;
     margin-top: 2rem;
     margin-bottom: 2.5rem;
 
     @include tablet {
         width: 100%;
-        padding-left: 1.5rem;
+
     }
 
     @include desktop {
@@ -39,16 +38,18 @@
 
     &__card {
         border-bottom: 2px solid $silver;
+        margin-left: 1.2rem;
 
         @include tablet {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
+            justify-content: center;
         }
 
         h3 {
             @include tablet {
-                width: 25%;
+                width: 30%;
             }
         }
 
@@ -70,6 +71,7 @@
 
     &__title {
         margin: 0;
+        padding-left: 2.1rem;
 
         @include desktop {
             margin-top: 25px;
@@ -99,11 +101,12 @@
     
         @include tablet {
             display: flex;
+            padding-left: 2.2rem;
         }
     
         p {
             @include tablet {
-                width: 25%;
+                width: 27%;
             }
         } 
     }

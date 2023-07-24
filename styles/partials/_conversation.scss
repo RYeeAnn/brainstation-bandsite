@@ -3,7 +3,6 @@
 
 .conversation {
     background-color: $white;
-    margin-left: 16px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -16,6 +15,10 @@
     @include desktop {
         margin-left: 180px;
         width: 70%;
+    }
+
+    @include large-desktop {
+        padding-left: 12rem;
     }
 
     &__heading {
@@ -33,6 +36,8 @@
         padding-left: 10px;
         margin-bottom: 10px;
         box-sizing: border-box;
+        background-color: $alabaster;
+        font-family: 'AvenirNext LT Pro';
 
         @include desktop {
             height: 48px;
@@ -49,6 +54,7 @@
         padding-left: 10px;
         margin-bottom: 10px;
         box-sizing: border-box;
+        font-family: 'AvenirNext LT Pro';
 
         @include desktop {
             height: 96px;
@@ -58,6 +64,8 @@
 
     &__row {
         display: flex;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $mercury;
     }
 
     //background will only show at 100% Width
@@ -69,13 +77,15 @@
     }
 
     &__picture1 {
-        margin-top: 12px;
+        margin-top: 24px;
         margin-right: 20px;
+        margin-left: 5px;
         height: 20vh;
     }
 
     &__details {
         width: 90%;
+        margin-right: 0.8rem;
 
         & > p {
             margin-top: 0;
@@ -87,8 +97,8 @@
     }
 
     &__profile-picture {
-        width: 50px;
-        height: 50px;
+        width: 42px;
+        height: 38px;
         border-radius: 100%;
         background-color: $mercury;
     }
@@ -137,10 +147,10 @@
     &__pic {
         display: flex;
         width: 45px;
-        height: 40px;
+        height: 30px;
         border-radius: 100%;
-        position: absolute;
         padding-top: 0.8rem;
+        padding-left: 0.4rem;
     }
 
     &__title {
@@ -150,9 +160,8 @@
     }
 
     &__form {
-        display: flex;
-        justify-content: center;
-        width: 94%;
+        width: 95%;
+        margin-left: 0.5rem;
 
         @include tablet {
             width: auto;
@@ -181,18 +190,18 @@
     }
 
     &__info {
-        padding-left: 5rem;
+        padding-left: 2rem;
         padding-right: 1rem;
         font-size: 0.8rem;
         line-height: 1.2rem;
         word-spacing: 0.1rem;
+        width: 100%;
     }
 
     &__card {
-        margin-left: 1rem;
+        margin-left: 0.50rem;
         margin-right: 1rem;
-        width: 94%;
-        border-bottom: 1px solid $mercury;
+        width: 95%;
 
         @include tablet {
             width: 100%;
@@ -286,6 +295,8 @@
 }
 
 }
+
+
 
 
 

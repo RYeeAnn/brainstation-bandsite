@@ -194,6 +194,8 @@
 @media screen and (min-width: 1440px) {
   .hero2 {
     height: 132vh;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -208,12 +210,25 @@
 @media screen and (min-width: 1440px) {
   .hero2__title {
     font-size: 4rem;
+    width: 100%;
+    padding-top: 22rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero2__title--content {
+    font-weight: 600;
   }
 }
 
 @media screen and (min-width: 768px) {
   .playlist {
     width: 60vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .playlist {
+    padding-top: 40rem;
+    width: 60%;
   }
 }
 
@@ -239,12 +254,12 @@
   font-display: swap;
 }
 html {
-  width: 100vw;
+  width: 100%;
   font-family: "AvenirNext LT Pro";
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0;
 }
 
@@ -285,14 +300,12 @@ body {
     font-size: 1.43rem;
     word-spacing: 0.2rem;
     line-height: 1.8rem;
-    padding-top: 6.5rem;
     padding-left: 0.6rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .about__content--quote {
-    padding-left: 10rem;
-    margin-right: 26rem;
+    padding-left: 9rem;
   }
   .about__content--quote p {
     padding-top: 2rem;
@@ -300,7 +313,8 @@ body {
 }
 @media screen and (min-width: 2560px) {
   .about__content--quote {
-    padding-top: 25rem;
+    padding-top: 30rem;
+    margin-left: 3.5rem;
   }
 }
 .about__content--quote--bryan {
@@ -355,7 +369,7 @@ body {
   display: flex;
   width: 90vw;
   height: 45vh;
-  padding-left: 16px;
+  padding-left: 18px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -363,20 +377,26 @@ body {
   .about__img {
     display: flex;
     width: 80vw;
-    height: 60vh;
-    padding-left: 70px;
+    height: 55vh;
+    padding-left: 75px;
   }
 }
 @media screen and (min-width: 1440px) {
   .about__img {
-    width: 71vw;
-    height: 95vh;
+    width: 75vw;
+    height: 76vh;
     padding-left: 13rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__img {
+    margin-left: 1.4rem;
   }
 }
 @media screen and (min-width: 2560px) {
   .about__img {
     height: 128vh;
+    margin-left: 5rem;
   }
 }
 .about__paragraph {
@@ -388,12 +408,24 @@ body {
 @media screen and (min-width: 768px) {
   .about__paragraph {
     padding-left: 60px;
-    padding-top: 2rem;
+    padding-top: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__paragraph {
+    width: 89vw;
+    margin-left: 1.8rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .about__paragraph {
-    padding-top: 16rem;
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .about__paragraph {
+    margin-left: 14rem;
+    margin-top: 2rem;
   }
 }
 
@@ -402,12 +434,17 @@ body {
 }
 @media screen and (min-width: 768px) {
   .photo {
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .photo {
-    padding-left: 6.2rem;
+    padding-left: 6.5rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .photo {
+    margin-left: 2.5rem;
   }
 }
 
@@ -573,7 +610,6 @@ html {
 
 .conversation {
   background-color: #FFFFFF;
-  margin-left: 16px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -590,6 +626,11 @@ html {
     width: 70%;
   }
 }
+@media screen and (min-width: 2560px) {
+  .conversation {
+    padding-left: 12rem;
+  }
+}
 .conversation__heading {
   display: block;
   color: #AFAFAF;
@@ -604,6 +645,8 @@ html {
   padding-left: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  background-color: #FAFAFA;
+  font-family: "AvenirNext LT Pro";
 }
 @media screen and (min-width: 1440px) {
   .conversation input {
@@ -620,6 +663,7 @@ html {
   padding-left: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  font-family: "AvenirNext LT Pro";
 }
 @media screen and (min-width: 1440px) {
   .conversation textarea {
@@ -629,6 +673,8 @@ html {
 }
 .conversation__row {
   display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #E1E1E1;
 }
 .conversation__picture {
   border-style: hidden;
@@ -637,12 +683,14 @@ html {
   background-color: #AFAFAF;
 }
 .conversation__picture1 {
-  margin-top: 12px;
+  margin-top: 24px;
   margin-right: 20px;
+  margin-left: 5px;
   height: 20vh;
 }
 .conversation__details {
   width: 90%;
+  margin-right: 0.8rem;
 }
 .conversation__details > p {
   margin-top: 0;
@@ -653,8 +701,8 @@ html {
   }
 }
 .conversation__profile-picture {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 38px;
   border-radius: 100%;
   background-color: #E1E1E1;
 }
@@ -700,10 +748,10 @@ html {
 .conversation__pic {
   display: flex;
   width: 45px;
-  height: 40px;
+  height: 30px;
   border-radius: 100%;
-  position: absolute;
   padding-top: 0.8rem;
+  padding-left: 0.4rem;
 }
 .conversation__title {
   padding-left: 1rem;
@@ -711,9 +759,8 @@ html {
   padding-top: 1rem;
 }
 .conversation__form {
-  display: flex;
-  justify-content: center;
-  width: 94%;
+  width: 95%;
+  margin-left: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__form {
@@ -740,17 +787,17 @@ html {
   color: #AFAFAF;
 }
 .conversation__info {
-  padding-left: 5rem;
+  padding-left: 2rem;
   padding-right: 1rem;
   font-size: 0.8rem;
   line-height: 1.2rem;
   word-spacing: 0.1rem;
+  width: 100%;
 }
 .conversation__card {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   margin-right: 1rem;
-  width: 94%;
-  border-bottom: 1px solid #E1E1E1;
+  width: 95%;
 }
 @media screen and (min-width: 768px) {
   .conversation__card {
@@ -858,14 +905,12 @@ html {
 }
 .shows {
   margin-right: 1rem;
-  padding-left: 1rem;
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .shows {
     width: 100%;
-    padding-left: 1.5rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -895,17 +940,19 @@ html {
 }
 .shows__card {
   border-bottom: 2px solid #AFAFAF;
+  margin-left: 1.2rem;
 }
 @media screen and (min-width: 768px) {
   .shows__card {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 768px) {
   .shows__card h3 {
-    width: 25%;
+    width: 30%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -924,6 +971,7 @@ html {
 }
 .shows__title {
   margin: 0;
+  padding-left: 2.1rem;
 }
 @media screen and (min-width: 1440px) {
   .shows__title {
@@ -953,11 +1001,12 @@ html {
 @media screen and (min-width: 768px) {
   .shows__header {
     display: flex;
+    padding-left: 2.2rem;
   }
 }
 @media screen and (min-width: 768px) {
   .shows__header p {
-    width: 25%;
+    width: 27%;
   }
 }
 .shows__head {
