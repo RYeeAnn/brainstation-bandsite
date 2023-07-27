@@ -141,6 +141,8 @@
         height: 40px;
         border-radius: 100%;
         position: absolute;
+        margin-top: 2rem;
+        background-color: $silver;
         
     }
 
@@ -178,6 +180,7 @@
     &__namedate {
         display: flex;
         justify-content: space-between;
+        padding-left: 4rem;
     }
 
     &__name {
@@ -190,8 +193,6 @@
     }
 
     &__info {
-        padding-left: 2rem;
-        padding-right: 1rem;
         font-size: 0.8rem;
         line-height: 1.2rem;
         word-spacing: 0.1rem;
@@ -202,6 +203,8 @@
         margin-left: 0.50rem;
         margin-right: 1rem;
         width: 95%;
+        border-bottom: 2px solid $mercury;
+        padding-bottom: 2rem;
 
         @include tablet {
             width: 100%;
@@ -295,6 +298,7 @@
 }
 
 }
+
 
 
 

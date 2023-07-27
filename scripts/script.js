@@ -74,63 +74,115 @@ let comment = document.querySelector('.conversation__comments');
 
 //Forms
 
-let form = document.querySelector(".conversation__form");
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    let newinfo = {
-        name: e.target.name.value,
-        date: Date.now(),
-        comment: e.target.comment.value
-    }
-        // console.log(newinfo)
-        // console.log(conversationComments)
-
-        conversationComments.unshift(newinfo)
-        comment.innerText = "";
-
-        form.reset()
-    
-        for (let i = 0; i < conversationComments.length; i++) {
-            display(conversationComments[i]);
+function getCommentsData() {
+    comment.innerText = "";
+    axios
+      .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
+      .then(result => {
+        let conversationData = result.data;
+  
+        for (let i = 0; i < conversationData.length; i++) {
+          display(conversationData[i]);
         }
-});
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+  
+  getCommentsData();
+  
+  let form = document.querySelector(".conversation__form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let newComment = {
+      "name": e.target.name.value,
+      "comment": e.target.comment.value
+    }
+  
+    axios
+      .post(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`, newComment)
+      .then(result => {
+        form.reset();
+        display(result.data);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  });
+  
+  // commenting with new comments
+  function display(commentData) {
+    let commentContainer = document.querySelector(".conversation__comments");
 
-
-//API
-function displayComment() {
-axios
-    .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(error => {
-        console.log(error);
-    });
-}
-displayComment();
+    let commentElement = document.createElement("div");
+    commentElement.classList.add("conversation__card");
+  
+    let namedateInfoContainer = document.createElement("div");
+    namedateInfoContainer.classList.add("conversation__namedate-info");
+  
+    let imageContainer = document.createElement("div");
+    imageContainer.classList.add("conversation__pic");
+  
+    let commentImage = document.createElement("img");
+    commentImage.classList.add("conversation__img");
+    imageContainer.appendChild(commentImage);
+  
+    let namedateContainer = document.createElement("div");
+    namedateContainer.classList.add("conversation__namedate");
+  
+    let nameElement = document.createElement("p");
+    nameElement.classList.add("conversation__name");
+    nameElement.innerText = commentData.name;
+  
+    let dateElement = document.createElement("p");
+    dateElement.classList.add("conversation__date");
+    dateElement.innerText = formatDate(commentData.timestamp);
+  
+    namedateContainer.appendChild(nameElement);
+    namedateContainer.appendChild(dateElement);
+  
+    namedateInfoContainer.appendChild(imageContainer);
+    namedateInfoContainer.appendChild(namedateContainer);
+  
+    let commentTextElement = document.createElement("p");
+    commentTextElement.classList.add("conversation__info");
+    commentTextElement.innerText = commentData.comment;
+  
+    commentElement.appendChild(namedateInfoContainer);
+    commentElement.appendChild(commentTextElement);
+  
+    commentContainer.prepend(commentElement);
 
     
+    // Delete (not enough time to style)
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("conversation__delete-button");
+    deleteButton.innerText = "Delete";
+    deleteButton.addEventListener("click", () => deleteComment(commentData.id));
+  
+    commentElement.appendChild(deleteButton);
+  }
 
-    form.addEventListener("submit",(event) => {
-        event.preventDefault();
-        console.log(event.target.name.value);
-        console.log(event.target.comment.value);
+  function deleteComment(commentId) {
+    axios
+      .delete(`https://project-1-api.herokuapp.com/comments/${commentId}?api_key=${api_key}`)
+      .then(() => {
+  
+        getCommentsData();
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
 
-        axios
-            .post("https://project-1-api.herokuapp.com/comments?api_key=d7f73ceb-3054-49c8-b058-596d1c0b020b", {
-                name: event.target.name.value,
-                comment: event.target.comment.value,
+  
+  
+  function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  }
 
-            })
-            .then(response => {
-                console.log(response);
-                fetchApiData();
-
-            }).catch(error => {
-                console.log(error);
-            });
-    });
 
 
 

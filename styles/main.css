@@ -744,6 +744,8 @@ html {
   height: 40px;
   border-radius: 100%;
   position: absolute;
+  margin-top: 2rem;
+  background-color: #AFAFAF;
 }
 .conversation__pic {
   display: flex;
@@ -778,6 +780,7 @@ html {
 .conversation__namedate {
   display: flex;
   justify-content: space-between;
+  padding-left: 4rem;
 }
 .conversation__name {
   font-weight: 600;
@@ -787,8 +790,6 @@ html {
   color: #AFAFAF;
 }
 .conversation__info {
-  padding-left: 2rem;
-  padding-right: 1rem;
   font-size: 0.8rem;
   line-height: 1.2rem;
   word-spacing: 0.1rem;
@@ -798,6 +799,8 @@ html {
   margin-left: 0.5rem;
   margin-right: 1rem;
   width: 95%;
+  border-bottom: 2px solid #E1E1E1;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__card {
